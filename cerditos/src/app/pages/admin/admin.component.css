@@ -1,0 +1,123 @@
+
+.box-profile-user {
+  padding: 6%;
+  border: 1px solid lightgray;
+  background: ghostwhite;
+  margin-block-start: 25px;
+  border-radius: 16px;
+  width: 100%;
+  box-shadow: 11px 8px 9px #999;
+}
+
+.box-img-user {
+  padding: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.box-img-user img {
+  padding: 2%;
+  width: 24%;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background: white;
+}
+
+.box-info-user {
+  padding: 0%;
+  width: 100%;
+  margin-block-start: 5%;
+  text-align: center;
+  margin-block-end: 8%;
+}
+
+.box-info-user h3 {
+  padding: 0%;
+  font-family: "Londrina Solid";
+  font-size: 144%;
+  text-align: center;
+  color: darkgrey;
+}
+
+.box-info-user label {
+  padding: 0%;
+  color: black;
+  font-family: "Circular-Loom";
+  font-size: 101%;
+  margin-block-start: 1px;
+  display: inline-flex;
+}
+
+.box-info-user label img {
+  padding: 0%;
+  width: 25px;
+  margin-inline-end: 10px;
+}
+
+
+
+.box-title-item {
+  padding: 0%;
+  width: 100%;
+  text-align: left;
+  margin-block-start: 35px;
+  margin-block-end: 31px;
+}
+
+.box-title-item h1 {
+  padding: 0%;
+  font-size: 170%;
+  font-family: "Londrina Solid";
+  color: black;
+  line-height: 10px;
+  letter-spacing: 1px;
+}
+
+.img-icon-menu {
+  padding: 0%;
+  width: 24px;
+  margin-inline-end: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: black;
+  background-color: pink;
+  border-radius: 30px;
+  font-size: 100%;
+  font-weight: bolder;
+  text-align: left;
+  padding-inline-start: 25px;
+  width: 100%;
+  font-family: "Circular-Loom";
+  margin-inline-end: 10px;
+}
+
+.nav-pills .nav-link {
+  border: 0;
+  background: white;
+  border-radius: 30px;
+  margin-block-start: 16px;
+  border-bottom: 1px solid darkgray;
+  width: 100%;
+  text-align: left;
+  padding-inline-start: 25px;
+  font-family: "Circular-Loom";
+}
+
+
+
+
+
+
+
+

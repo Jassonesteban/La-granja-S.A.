@@ -1,0 +1,86 @@
+.box-title-register {
+    padding-bottom: 7px;
+    width: 100%;
+    text-align: center;
+    margin-block-end: 10px;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .box-title-register h1 {
+    padding: 0%;
+    font-size: 158%;
+    font-family: "Londrina Solid";
+    color: black;
+  }
+  
+  .body-form {
+    padding: 4%;
+    width: 100%;
+    background: ghostwhite;
+    border-radius: 11px;
+    border: lightgray;
+    margin-block-start: 33px;
+  }
+  
+  .box-item-form-user {
+    padding: 1%;
+    width: 100%;
+    margin-block-end: 10px;
+    display: inline-block;
+  }
+  
+  .box-item-form-user label {
+    padding: 0%;
+    font-family: "Circular-Loom";
+    color: black;
+    font-size: 101%;
+  }
+  
+  .form-data {
+    padding: 2%;
+    width: 100%;
+    margin-block-start: 12px;
+    border-radius: 7px;
+    color: black;
+    background: white;
+    font-family: "Circular-Loom";
+    border: 1px solid lightgray;
+    padding-inline-start: 4%;
+  }
+  
+  .box-btn-submit {
+    padding: 1%;
+    width: 100%;
+    text-align: center;
+    margin-block-start: 17px;
+    margin-block-end: 11px;
+  }
+  
+  .btn-new-client {
+    padding: 1.5%;
+    width: 44%;
+    border-radius: 30px;
+    background: lightpink;
+    font-family: "Londrina Solid";
+    font-size: 114%;
+    border: 1px solid lightpink;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .box-title-item-user {
+    padding: 3% 0% 1%;
+    width: 50%;
+    text-align: left;
+    border-bottom: 1px solid lightgray;
+    margin-block-end: 16px;
+    margin-block-start: 2px;
+  }
+  
+  .box-title-item-user h2 {
+    padding: 0%;
+    font-family: "Londrina Solid";
+    font-size: 189%;
+    color: gray;
+  }
+

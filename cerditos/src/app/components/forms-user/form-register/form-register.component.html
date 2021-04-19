@@ -1,0 +1,87 @@
+<div class="box-title-register">
+    <h1>Nuevo cliente</h1>
+</div>
+<div class="body-form">
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="row">
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Tipo de identificacón</label>
+                    <select class="form-data form-control" id="validationCustom01" required>
+                        <option selected disabled value="">Seleccione uno</option>
+                        <option value="Cedula de ciudadania">Cedula de ciudadania
+                        </option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor seleccione uno
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Numero de identificación</label>
+                    <input type="text" class="form-data form-control" placeholder="ingrese su numero de identificacion"
+                        id="validationCustom02" required />
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Nombre(s)</label>
+                    <input type="text" class="form-data form-control" placeholder="Nombre completo"
+                        id="validationCustom03" required />
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Apellido(s)</label>
+                    <input type="text" class="form-data form-control" placeholder="Apellido completo"
+                        id="validationCustom04" required />
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Dirección</label>
+                    <input type="text" class="form-data form-control" placeholder="Dirección de residencia"
+                        id="validationCustom05" required />
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box-item-form-user">
+                    <label>Telefono</label>
+                    <input type="text" class="form-data form-control" placeholder="Numero de contacto"
+                        id="validationCustom06" required />
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box-btn-submit">
+                    <button type="submit" class="btn-new-client" (click)="RegisterClient()">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

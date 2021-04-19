@@ -1,0 +1,35 @@
+.header-box{
+    padding: 2%;
+    width: 100%;
+    background: white;
+    padding-bottom: 1%;
+    padding-top: 8px;
+    display: inline-flex;
+}
+
+.box-logo{
+    padding: 1%;
+    width: 30%;
+    height: 24%;
+    display: flex;
+}
+
+.img-logo-company{
+    padding: 0%;
+    width: 16%;
+    float: left;
+    height: 12%;
+}
+
+.name-company{
+    padding: 0%;
+    float: right;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 37px;
+    margin-block-start: 17px;
+}
+
+.box-name-company{
+    padding: 0%;
+    margin-inline-start: 10px;
+}

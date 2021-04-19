@@ -1,0 +1,75 @@
+.box-footer {
+  padding: 1%;
+  width: 100%;
+  background: rgb(228, 155, 166);
+  height: 100%;
+  margin-block-start: 4%;
+  border-top: 1px solid lightgray;
+  border-top-left-radius: 58px;
+  border-top-right-radius: 58px;
+}
+
+.box-data {
+  padding: 2%;
+  width: 90%;
+  display: inline-flex;
+}
+
+.box-names {
+  padding: 0%;
+  width: 50%;
+  text-align: left;
+}
+
+.box-names label {
+  padding: 0%;
+  font-family: "Circular-Loom";
+  font-size: 122%;
+  color: white;
+  font-weight: bold;
+}
+
+.box-names p {
+  padding: 0%;
+  font-family: "Circular-Loom";
+  margin-block-start: 6px;
+  margin-block-end: 0px;
+  color: black;
+  font-size: 90%;
+}
+
+.box-names h5 {
+  padding: 0%;
+  font-family: "Circular-Loom";
+  margin-block-start: 5px;
+  color: black;
+  font-weight: bolder;
+  font-size: 99%;
+}
+
+.box-info-university {
+  padding: 0%;
+  display: inline-grid;
+  width: 50%;
+  font-family: "Circular-Loom";
+}
+
+.img-logo {
+  padding: 0%;
+  width: 69%;
+  height: 99%;
+}
+
+.box-info-university label {
+  padding: 0%;
+  font-size: 116%;
+  color: gray;
+  margin-inline-start: -50%;
+}
+
+.box {
+  padding: 0%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}

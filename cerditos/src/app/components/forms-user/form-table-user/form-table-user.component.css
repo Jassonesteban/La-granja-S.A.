@@ -1,0 +1,68 @@
+.btn-delete {
+  padding: 2% 6%;
+  width: 25%;
+  border: 1px solid pink;
+  margin-inline-end: 19px;
+  border-radius: 50%;
+  background: pink;
+  cursor: pointer;
+}
+
+.btn-edit {
+  padding: 2% 6%;
+  width: 25%;
+  border: 1px solid pink;
+  border-radius: 50%;
+  background: pink;
+  cursor: pointer;
+}
+
+.icon-crud {
+  padding: 0%;
+  width: 18px;
+  margin-block-end: 4px;
+  margin-inline-start: 1px;
+}
+
+.btns-crud {
+  padding: 0%;
+  width: 100%;
+  display: inline-flex;
+  text-align: center;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+  background: ghostwhite;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6c757d;
+  text-align: left;
+  font-size: 130%;
+  font-family: "Londrina Solid";
+  font-weight: 100;
+  margin-block-end: 10px;
+  margin-block-start: 5px;
+}
+
+.items-submenu-user {
+  padding: 0%;
+}
+
+.items-submenu-user.active {
+  padding: 0%;
+}
