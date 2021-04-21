@@ -20,6 +20,8 @@ import { FormRegisterPigsComponent } from './components/forms-pigs/form-register
 import { FormTablePigsComponent } from './components/forms-pigs/form-table-pigs/form-table-pigs.component';
 import { FormDeletePigsComponent } from './components/forms-pigs/form-delete-pigs/form-delete-pigs.component';
 import { FormUpdatePigsComponent } from './components/forms-pigs/form-update-pigs/form-update-pigs.component';
+import { RegisterComponent } from './components/admin/register/register.component';
+import { BillsComponent } from './components/bills/bills.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { FormUpdatePigsComponent } from './components/forms-pigs/form-update-pig
     FormRegisterPigsComponent,
     FormTablePigsComponent,
     FormDeletePigsComponent,
-    FormUpdatePigsComponent
+    FormUpdatePigsComponent,
+    RegisterComponent,
+    BillsComponent
   ],
   imports: [
     BrowserModule,

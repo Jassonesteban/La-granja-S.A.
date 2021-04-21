@@ -1,0 +1,115 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registrarse, serás un nuevo embajador de la Granja S.A.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-6">
+                <div class="img-banner">
+                    <img src="../../../assets/images/banner_pig.png" alt="img-banner">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box-welcome-form-data">
+                    <img src="../../../assets/images/cerdo (2).png" alt="logo-two" class="img-logo-two" />
+                    <h3>¡Estas más cerca de un chanchito!</h3>
+
+                </div>
+                <form class="needs-validation" novalidate>
+                    <div class="box-form-register">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box-form-imput-user">
+
+                                    <label class="label-form-data-user">Tipo de identificacion</label>
+                                    <input list="datalistOptions" id="exampleDataList" placeholder="selecciona una"
+                                        class="input-form-data-user type-id">
+                                    <datalist id="datalistOptions">
+                                        <option value="Cedula de ciudadanía - CC">
+                                        <option value="Pasaporte">
+                                    </datalist>
+                                    <div class="box-validation" id="boxValidation">
+                                        <label class="label-validation" id="labelValidation"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box-form-imput-user">
+                                    <label class="label-form-data-user">Numero de identificacion</label>
+                                    <input type="text" class="input-form-data-user type-id form-control"
+                                        placeholder="N. identificación" id="validationCustom01" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa un id valido
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-form-imput-user">
+                            <label class="label-form-data-user">Nombre(s)</label>
+                            <input type="text" class="input-form-data-user form-control"
+                                placeholder="Ingrese su(s) nombre(s)" id="validationCustom02" required>
+                            <div class="invalid-feedback">
+                                Ingresa un nombre valido
+                            </div>
+                        </div>
+                        <div class="box-form-imput-user">
+                            <label class="label-form-data-user">Apellido(s)</label>
+                            <input type="text" class="input-form-data-user form-control"
+                                placeholder="Ingrese su(s) apellido(s)" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Ingresa un apellido valido
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box-form-imput-user">
+                                    <label class="label-form-data-user">Dirección</label>
+                                    <input type="text" class="input-form-data-user type-id form-control"
+                                        placeholder="Ingrese su dirección de residencia o trabajo"
+                                        id="validationCustom04" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa una dirección valida
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box-form-imput-user">
+                                    <label class="label-form-data-user">Telefono</label>
+                                    <input type="text" class="input-form-data-user type-id form-control"
+                                        placeholder="Ingrese su numero de contacto" id="validationCustom05" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa un numero de telefono valido
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-form-imput-user">
+                            <label class="label-form-data-user">Correo electronico</label>
+                            <input type="email" class="input-form-data-user form-control"
+                                placeholder="Ingrese su correo corporativo" id="validationCustom06" required>
+                            <div class="invalid-feedback">
+                                Ingresa un correo valido
+                            </div>
+                        </div>
+
+                        <div class="box-form-imput-user">
+                            <label class="label-form-data-user">Contraseña</label>
+                            <input type="password" class="input-form-data-user form-control" placeholder="*************"
+                                id="validationCustom07" required>
+                            <div class="invalid-feedback">
+                                Ingresa una contraseña valida
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="box-btn-submit">
+                        <button type="submit" class="button-register-user" (click)="validate()">Registrar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

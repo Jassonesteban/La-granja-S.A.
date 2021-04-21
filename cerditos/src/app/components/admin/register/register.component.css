@@ -1,78 +1,6 @@
 .box-content {
   width: 100%;
   display: inline-flex;
-} 
-
-.box-welcome {
-  padding: 2%;
-  width: 60%;
-  background: white;
-  margin-inline-start: 1%;
-  margin-inline-end: 10%;
-  margin-block-start: 4%;
-  border-radius: 22px;
-  position: initial;
-  box-shadow: 16px 16px 41px #999;
-  padding-top: 3%;
-  height: 60%;
-}
-
-.box-welcome h1 {
-  padding: 0%;
-  font-size: 203%;
-  font-family: "Circular-Loom";
-  color: black;
-  line-height: 18px;
-  text-align: center;
-}
-
-.box-form {
-  padding: 0%;
-    width: 100%;
-    margin-block-start: 21px;
-}
-
-.box-form-imput {
-  padding: 3%;
-  width: 100%;
-}
-
-.box-form-imput label {
-  padding: 0%;
-  font-size: 110%;
-  font-family: "Circular-Loom";
-  color: black;
-}
-
-.form-imput {
-  padding: 3%;
-  width: 100%;
-  border-radius: 24px;
-  border: 1px solid lightgray;
-  background: ghostwhite;
-  font-family: "Circular-Loom";
-  color: black;
-  margin-block-start: 15px;
-  padding-inline-start: 24px;
-}
-
-.btn-login {
-  padding: 3%;
-  width: 100%;
-  border-radius: 42px;
-  background: rgb(230, 140, 154);
-  border: 1px solid lightpink;
-  color: white;
-  font-size: 105%;
-  font-weight: bold;
-  font-family: "Circular-Loom";
-  margin-block-start: 3%;
-  cursor: pointer;
-}
-
-.btn-login:hover {
-  background: rgb(242, 183, 192);
-  border: 1px solid lightpink;
 }
 
 .box-img {
@@ -287,11 +215,11 @@
   line-height: 12px;
 }
 
-.icon-form{
+.icon-form {
   padding: 0%;
-    width: 21px;
-    display: inline-flex;
-    margin-inline-end: 10px;
-    margin-inline-start: 6px;
-    margin-block-start: -5px;
+  width: 21px;
+  display: inline-flex;
+  margin-inline-end: 10px;
+  margin-inline-start: 6px;
+  margin-block-start: -5px;
 }
