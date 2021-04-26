@@ -109,3 +109,23 @@
     margin: -.5rem -.5rem -.5rem auto;
     display: none;
 }
+
+.alert-successful-delete{
+    display: none;
+}
+
+.alert-attention{
+    display: block;
+}
+
+.alert-info-delete-user{
+    display: block;
+}
+
+.footer-one{
+    display: block;
+}
+
+.footer-two{
+    display: none;
+}

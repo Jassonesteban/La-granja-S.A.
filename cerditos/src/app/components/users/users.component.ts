@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-users',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  comprador: any = [];
 
-  constructor() { }
+  constructor(private dataServiceService: DataServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
 
 }

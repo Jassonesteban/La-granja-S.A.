@@ -1,5 +1,5 @@
 <div class="box-title-register">
-    <h1>Nuevo cliente</h1>
+    <h1>Nuevo usuario</h1> 
 </div>
 <div class="body-form">
     <form class="row g-3 needs-validation" novalidate>
@@ -7,22 +7,20 @@
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Tipo de identificacón</label>
-                    <select class="form-data form-control" id="validationCustom01" required>
+                    <select class="form-data form-control" id="validationCustom01" name="selectTypeId" required #TypeId [(ngModel)]="usuario.docType">
                         <option selected disabled value="">Seleccione uno</option>
-                        <option value="Cedula de ciudadania">Cedula de ciudadania
-                        </option>
+                        <option value="Cedula de ciudadania">Cedula de ciudadania</option>
                         <option value="Pasaporte">Pasaporte</option>
                     </select>
                     <div class="invalid-feedback">
                         Por favor seleccione uno
-                    </div>
+                    </div> 
                 </div>
             </div>
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Numero de identificación</label>
-                    <input type="text" class="form-data form-control" placeholder="ingrese su numero de identificacion"
-                        id="validationCustom02" required />
+                    <input type="text" class="form-data form-control" placeholder="ingrese su numero de identificacion" id="validationCustom02" name="NumberId" #NumberId [(ngModel)]="usuario.id" required/>
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -34,8 +32,7 @@
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Nombre(s)</label>
-                    <input type="text" class="form-data form-control" placeholder="Nombre completo"
-                        id="validationCustom03" required />
+                    <input type="text" class="form-data form-control" placeholder="Nombre completo" id="validationCustom03" required name="NameUser" #NameUser [(ngModel)]="usuario.name"/>
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -45,7 +42,7 @@
                 <div class="box-item-form-user">
                     <label>Apellido(s)</label>
                     <input type="text" class="form-data form-control" placeholder="Apellido completo"
-                        id="validationCustom04" required />
+                        id="validationCustom04" required name="LastName" #LastName [(ngModel)]="usuario.lastName"/>
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -57,7 +54,7 @@
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Dirección</label>
-                    <input type="text" class="form-data form-control" placeholder="Dirección de residencia"
+                    <input type="text" class="form-data form-control" placeholder="Dirección de residencia" #AddressUser name="AddressUser" [(ngModel)]="usuario.adress"
                         id="validationCustom05" required />
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
@@ -67,7 +64,7 @@
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Telefono</label>
-                    <input type="text" class="form-data form-control" placeholder="Numero de contacto"
+                    <input type="text" class="form-data form-control" placeholder="Numero de contacto"  name="PhoneUser" #PhoneUser [(ngModel)]="usuario.tel"
                         id="validationCustom06" required />
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
@@ -79,9 +76,30 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="box-btn-submit">
-                    <button type="submit" class="btn-new-client" (click)="RegisterClient()">Registrar</button>
+                    <button type="submit" class="btn-new-client" (click)="RegisterClient(NumberId, TypeId, NameUser, LastName, AddressUser,PhoneUser)">Registrar</button>
+
                 </div>
             </div>
         </div>
     </form>
 </div>
+
+<button type="button" class="btn btn-primary" id="btnModal" data-bs-toggle="modal" data-bs-target="#exampleModalprueba" style="display: none;"></button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalprueba" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registro de usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{mensaje}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>

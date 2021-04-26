@@ -22,6 +22,9 @@ import { FormDeletePigsComponent } from './components/forms-pigs/form-delete-pig
 import { FormUpdatePigsComponent } from './components/forms-pigs/form-update-pigs/form-update-pigs.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { BillsComponent } from './components/bills/bills.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {DataServiceService} from './services/data-service.service';
 
 @NgModule({
   declarations: [
@@ -48,9 +51,15 @@ import { BillsComponent } from './components/bills/bills.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
-  providers: [],
+  providers: [
+    DataServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

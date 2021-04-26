@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "4383500d-498f-48cd-978f-817f5d16e37f",
+		"name": "THE FARM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"99020605320\",\r\n    \"docType\": \"CC\",\r\n    \"name\": \"Jasson\",\r\n    \"lastName\": \"Gualguan\",\r\n    \"adress\": \"Calle 25 # 58-89\",\r\n    \"tel\": \"3117895689\",\r\n    \"type\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"99020605320\",\r\n    \"docType\": \"CC\",\r\n    \"name\": \"Jasson\",\r\n    \"lastName\": \"Gualguan\",\r\n    \"adress\": \"Calle 25 # 58-89\",\r\n    \"tel\": \"3117895688\",\r\n    \"type\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/user/99020605320",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"user",
+								"99020605320"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/user/99020605320",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"user",
+								"99020605320"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "food",
+			"item": [
+				{
+					"name": "create food",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dose\": 1.5,\r\n    \"description\": \"Any description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/food",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update food",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"dose\": 1.6,\r\n    \"description\": \"Any description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/food",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get food",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/food/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"food",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all foods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/food",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete food",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/food/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"food",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pig",
+			"item": [
+				{
+					"name": "create pig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"breed\": \"YORK\",\r\n    \"age\": 1,\r\n    \"weight\": 80.5,\r\n    \"food\": {\r\n        \"id\": 1\r\n    },\r\n    \"user\": {\r\n        \"id\": \"99020605320\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/pig",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"pig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update pig",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"breed\": \"YORK\",\r\n    \"age\": 1,\r\n    \"weight\": 80.5,\r\n    \"food\": {\r\n        \"id\": 1\r\n    },\r\n    \"user\": {\r\n        \"id\": \"99020605320\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/pig",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"pig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get pig",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/pig/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"pig",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all pigs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1999/pig",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"pig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete pig",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1999/pig/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1999",
+							"path": [
+								"pig",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

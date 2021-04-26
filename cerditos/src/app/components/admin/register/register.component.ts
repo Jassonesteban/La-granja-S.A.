@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { user } from 'src/app/interfaces/interface';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-register-admin',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  admin: user ={
+    id: '',
+    docType: '',
+    name: '',
+    lastName: '',
+    adress: '',
+    tel: '',
+    type: 'admin'
+  }; 
+
+  administrador: any = [];
+  logged: any;
+
+  constructor(private dataServiceService: DataServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  public CreatedAdmin(){
+    this.dataServiceService.CreateAdmin(this.admin).subscribe(
+      res => {
+        console.log("Administrador creado correctamente");
+        window.location.reload();
+        this.administrador = res;
+        console.log(this.administrador);
+      }
+    )
   }
 
   validate() {

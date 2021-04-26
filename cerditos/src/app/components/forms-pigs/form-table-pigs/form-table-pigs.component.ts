@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
+import { DataServiceService } from '../../../services/data-service.service';
 
 @Component({
   selector: 'app-form-table-pigs',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormTablePigsComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  compradores: any = [];
+  cerditosComprados: any = [];
+  cerdo: any;
+  listCompradores: any;
+
+  constructor(private dataServiceService: DataServiceService) { }
+
+  ngOnInit() {
+    this.getUserWhitPigs();
+  }
+
+  public getUserWhitPigs() {
+    this.dataServiceService.GetUsers().subscribe(
+       res => {
+        this.listCompradores = res;
+        this.compradores = this.listCompradores;
+        console.log(this.compradores);
+      },
+      err => console.log(err)
+    );
+
   }
 
 }

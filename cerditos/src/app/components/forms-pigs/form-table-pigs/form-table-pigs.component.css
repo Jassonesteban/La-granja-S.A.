@@ -66,3 +66,17 @@ caption {
 .items-submenu-user.active {
   padding: 0%;
 }
+
+.btn-view-info-pig{
+  padding: 3%;
+  background: pink;
+  width: 90%;
+  border-radius: 31px;
+  border: 1px solid hotpink;
+  font-size: 100%;
+  color: black;
+  font-weight: bolder;
+  font-family: 'Circular-Loom';
+  text-align: center;
+  margin-inline-start: 10px;
+}

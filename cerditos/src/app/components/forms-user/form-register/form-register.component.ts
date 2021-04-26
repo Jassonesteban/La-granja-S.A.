@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataServiceService } from '../../../services/data-service.service';
+import { user } from '../../../interfaces/interface';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-register',
@@ -7,13 +11,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormRegisterComponent implements OnInit {
 
-  constructor() { }
+  usuario: user ={
+    id: '',
+    docType: '',
+    name: '',
+    lastName: '',
+    adress: '',
+    tel: '',
+    type: 'User'
+  }; 
+
+  mensaje = '';
+  
+  
+
+  constructor(private router: Router, private dataServiceService: DataServiceService) { }
 
   ngOnInit(): void {
   }
 
-  RegisterClient(){
-    this.validate();
+  RegisterClient(id, docType, name, lastName, adress, tel){
+    if(id.value === '' || docType.value === '' || name.value === '' || lastName.value === '' || adress.value === '' || tel.value === ''){
+      this.validate();
+    } else {
+      this.mensaje = 'Lo estamos registrando, por favor espere';
+      this.dataServiceService.CreateUser(this.usuario).subscribe(
+        res =>{
+          this.mensaje = "Felicidades, el usuario fue registrado exitosamente";
+          document.getElementById('btnModal').click();
+        },
+        err => console.log(err)
+      );
+    }
+  
   }
 
 
@@ -32,6 +62,12 @@ export class FormRegisterComponent implements OnInit {
           form.classList.add('was-validated')
         }, false)
       })
+    }
+
+
+
+    private reset(){
+  
     }
 
 }

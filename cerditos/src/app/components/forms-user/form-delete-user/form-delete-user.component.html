@@ -1,32 +1,43 @@
-<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Eliminar usuario</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Eliminar usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-warning alert-attention" role="alert" id="alertOne">
+          Atención, esta a punto de borrar un usuario
         </div>
-        <div class="modal-body">
-            <div class="alert alert-warning" role="alert">
-               Atención, esta a punto de borrar un usuario
-              </div>
 
-              <div class="body-alert-delete-user">
-                  <div class="row">
-                    <h5>El usuario con cedula <strong>1152705784</strong></h5>
-                  </div>
-                  <div class="row">
-                    <h4>y de nombre: <strong>Jasson Esteban Gualguan Guzmán</strong> sera elimínado </h4>
-                  </div>
+        <div class="body-alert-delete-user alert-info-delete-user" id="alertTwo">
+          <div class="row">
+            <h5>El usuario con cedula <strong>{{cedula}}</strong></h5>
+          </div>
+          <div class="row">
+            <h4>y de nombre: <strong>{{nombres}} {{apellidos}}</strong> sera elimínado </h4>
+          </div>
 
-                  <div class="alert-question-delete">
-                      <p>¿Estas seguro?</p>
-                  </div>
-              </div>
+          <div class="alert-question-delete">
+            <p>¿Estas seguro?</p>
+          </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-cancel-action"
-                data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-delete-user">ELIMINAR</button>
+
+        <div class="alert-successful-delete" id="alertSuccess">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Bien hecho!</h4>
+            <p>Se eliminó el usuario correctamente de la base de datos, si deseas tenerlo de vuelta, debes volver a registrarlo en el formulario de registro de usuarios</p>
+            <hr>
+            <p class="mb-0">Si tenia cerditos comprados, esos registros tambien fueron borrados de la base de datos</p>
+          </div>
         </div>
+      </div>
+      <div class="modal-footer footer-one" id="footerInit">
+        <button type="button" class="btn btn-cancel-action" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-delete-user" (click)="eliminar()">ELIMINAR</button>
+      </div>
+
     </div>
+  </div>
 </div>

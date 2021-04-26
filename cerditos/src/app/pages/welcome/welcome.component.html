@@ -10,33 +10,20 @@
             <form class="needs-validation" novalidate>
                 <div class="box-form-imput">
                     <img src="../../../assets/images/email.png" class="icon-form" />
-                    <label>Correo electronico</label>
-                    <input type="email" placeholder="ingrese su correo corporativo" class="form-imput form-control"
+                    <label>Cedula o pasaporte</label>
+                    <input type="text" placeholder="ingrese su cedula de ciudadania o pasaporte" class="form-imput form-control"
                         id="validationCustom010" required />
                     <div class="invalid-feedback">
-                        Por favor ingresa un correo valido
+                        Por favor ingresa un id valido
                     </div>
                 </div>
                 <div class="box-form-imput">
-                    <img src="../../../assets/images/pass.png" class="icon-form" />
-                    <label>Contraseña</label>
-                    <input type="password" placeholder="**********" class="form-imput form-control"
-                        id="validationCustom020" required />
-                    <div class="invalid-feedback">
-                        Ingresa una contraseña valida
-                    </div>
-                </div>
-                <div class="box-form-imput">
-                    <button class="btn-login" type="submit" (click)="validateLogin()">Ingresar</button>
+                    <button class="btn-login" type="submit" (click)="loginAdmin()">Ingresar</button>
                 </div>
             </form>
 
-            <div class="box-forget-password">
-                <a href="#"> ups, olvide mi contraseña</a>
-            </div>
-
             <div class="box-new-user">
-                <label>¿Quieres ser un distribuidor?, <a data-bs-toggle="modal" data-bs-target="#exampleModal">Crear una cuenta</a>
+                <label>¿Quieres ser un administrador?, <a data-bs-toggle="modal" data-bs-target="#exampleModal">Crear una cuenta</a>
                 </label>
             </div>
         </div>

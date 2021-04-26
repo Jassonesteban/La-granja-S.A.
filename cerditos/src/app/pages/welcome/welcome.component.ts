@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/services/data-service.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,42 +8,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  usuario: any =[];
+  constructor(private dataServiceService: DataServiceService) { }
 
   ngOnInit() {
   }
 
-  validate() {
-    var forms = document.querySelectorAll('.needs-validation');
-    var type_id = ((document.getElementById("exampleDataList") as HTMLInputElement).value);
-
-    if (type_id === '') {
-      var caja = document.getElementById('labelValidation');
-      var content = document.getElementById('boxValidation');
-      var messaje = "Escoja uno";
-      caja.innerHTML = messaje;
-      content.style.display = "block";
-
+  public loginAdmin(){
+    var cedula = ((document.getElementById("validationCustom010") as HTMLInputElement).value);
+    console.log(cedula);
+    if(cedula === ''){
+      this.validateLogin();
     } else {
-      console.log(type_id);
-    }
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
+      this.dataServiceService.searchUser(cedula).subscribe(
+        res => {
+          this.usuario = res;
+          if(this.usuario){
+            localStorage.clear();
+            localStorage.setItem('usuario', JSON.stringify(cedula));
+            this.usuario = JSON.parse(localStorage.getItem('usuario'));
+            window.location.href="/inicio";
+          } else{
+            console.log("ups, este usuario no existe");
           }
+          console.log(this.usuario);
+        },
+        err => console.log(err)
+      );
 
-          form.classList.add('was-validated')
-        }, false)
-      })
+    }
+    
+
   }
 
-  validateLogin() {
+
+
+  private validateLogin() {
     'use strict'
-    window.location.href="/inicio";
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll('.needs-validation')
 

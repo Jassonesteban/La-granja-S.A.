@@ -1,5 +1,6 @@
 <table class="table caption-top">
     <caption>Nuestros clientes</caption>
+    
     <thead>
         <tr>
             <th scope="col">N.</th>
@@ -10,68 +11,32 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tr *ngFor="let users of comprador ; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{users.name}}</td> 
+            <td>{{users.lastName}}</td>
+            <td>{{users.adress}}</td> 
             <td>
                 <div class="btns-crud">
                     <button class="btn btn-delete" type="button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         <img src="assets/images/borrar.png" class="icon-crud">
                     </button>
+                        <app-form-delete-user (refrescar) = "verData()" #borrar [cedula] = "users.id" [nombres] = "users.name" [apellidos] = "users.lastName"></app-form-delete-user>
 
                     <button class="btn btn-edit" type="button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdropedit">
                         <img src="assets/images/editar.png" class="icon-crud">
                     </button>
+                    <div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <app-form-update-user></app-form-update-user>
+                    </div>
                 </div>
             </td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>
-                <div class="btns-crud">
-                    <button class="btn-delete">
-                        <img src="assets/images/borrar.png" class="icon-crud">
-                    </button>
-                    <button class="btn-edit">
-                        <img src="assets/images/editar.png" class="icon-crud">
-                    </button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>
-                <div class="btns-crud">
-                    <button class="btn-delete">
-                        <img src="assets/images/borrar.png" class="icon-crud">
-                    </button>
-                    <button class="btn-edit">
-                        <img src="assets/images/editar.png" class="icon-crud">
-                    </button>
-                </div>
-            </td>
-        </tr>
+
     </tbody>
 </table>
 
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-form-delete-user></app-form-delete-user>
-</div>
-
-
-<div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <app-form-update-user></app-form-update-user>
-</div>

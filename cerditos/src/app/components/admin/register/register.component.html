@@ -24,7 +24,7 @@
 
                                     <label class="label-form-data-user">Tipo de identificacion</label>
                                     <input list="datalistOptions" id="exampleDataList" placeholder="selecciona una"
-                                        class="input-form-data-user type-id">
+                                        class="input-form-data-user type-id" [(ngModel)]="admin.docType" name="typeDoc" required  #docType/>
                                     <datalist id="datalistOptions">
                                         <option value="Cedula de ciudadanía - CC">
                                         <option value="Pasaporte">
@@ -38,7 +38,7 @@
                                 <div class="box-form-imput-user">
                                     <label class="label-form-data-user">Numero de identificacion</label>
                                     <input type="text" class="input-form-data-user type-id form-control"
-                                        placeholder="N. identificación" id="validationCustom01" required>
+                                        placeholder="N. identificación" id="validationCustom01" [(ngModel)]="admin.id" name="numberID" #numberid required>
                                     <div class="invalid-feedback">
                                         Ingresa un id valido
                                     </div>
@@ -48,7 +48,7 @@
                         <div class="box-form-imput-user">
                             <label class="label-form-data-user">Nombre(s)</label>
                             <input type="text" class="input-form-data-user form-control"
-                                placeholder="Ingrese su(s) nombre(s)" id="validationCustom02" required>
+                                placeholder="Ingrese su(s) nombre(s)" id="validationCustom02" [(ngModel)]="admin.name" name="nameAdmin" #nameUser required>
                             <div class="invalid-feedback">
                                 Ingresa un nombre valido
                             </div>
@@ -56,7 +56,7 @@
                         <div class="box-form-imput-user">
                             <label class="label-form-data-user">Apellido(s)</label>
                             <input type="text" class="input-form-data-user form-control"
-                                placeholder="Ingrese su(s) apellido(s)" id="validationCustom03" required>
+                                placeholder="Ingrese su(s) apellido(s)" id="validationCustom03" [(ngModel)]="admin.lastName" #lastName name="lastName" required>
                             <div class="invalid-feedback">
                                 Ingresa un apellido valido
                             </div>
@@ -68,7 +68,7 @@
                                     <label class="label-form-data-user">Dirección</label>
                                     <input type="text" class="input-form-data-user type-id form-control"
                                         placeholder="Ingrese su dirección de residencia o trabajo"
-                                        id="validationCustom04" required>
+                                        id="validationCustom04" [(ngModel)]="admin.adress" name="addressUser" #addressUser required>
                                     <div class="invalid-feedback">
                                         Ingresa una dirección valida
                                     </div>
@@ -78,34 +78,17 @@
                                 <div class="box-form-imput-user">
                                     <label class="label-form-data-user">Telefono</label>
                                     <input type="text" class="input-form-data-user type-id form-control"
-                                        placeholder="Ingrese su numero de contacto" id="validationCustom05" required>
+                                        placeholder="Ingrese su numero de contacto" id="validationCustom05" [(ngModel)]="admin.tel" name="phoneUser" #phoneuser required>
                                     <div class="invalid-feedback">
                                         Ingresa un numero de telefono valido
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box-form-imput-user">
-                            <label class="label-form-data-user">Correo electronico</label>
-                            <input type="email" class="input-form-data-user form-control"
-                                placeholder="Ingrese su correo corporativo" id="validationCustom06" required>
-                            <div class="invalid-feedback">
-                                Ingresa un correo valido
-                            </div>
-                        </div>
-
-                        <div class="box-form-imput-user">
-                            <label class="label-form-data-user">Contraseña</label>
-                            <input type="password" class="input-form-data-user form-control" placeholder="*************"
-                                id="validationCustom07" required>
-                            <div class="invalid-feedback">
-                                Ingresa una contraseña valida
-                            </div>
-                        </div>
+                        </div> 
 
                     </div>
                     <div class="box-btn-submit">
-                        <button type="submit" class="button-register-user" (click)="validate()">Registrar</button>
+                        <button type="submit" class="button-register-user" (click)="CreatedAdmin()">Registrar</button>
                     </div>
                 </form>
 

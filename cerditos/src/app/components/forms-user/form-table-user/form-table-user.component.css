@@ -19,9 +19,11 @@
 
 .icon-crud {
   padding: 0%;
-  width: 18px;
-  margin-block-end: 4px;
-  margin-inline-start: 1px;
+    width: 18px;
+    margin-block-end: 4px;
+    margin-inline-start: 0px;
+    margin-inline-end: 24px;
+    position: relative;
 }
 
 .btns-crud {
