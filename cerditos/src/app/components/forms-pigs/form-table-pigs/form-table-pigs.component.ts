@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { DataServiceService } from '../../../services/data-service.service';
 
 @Component({

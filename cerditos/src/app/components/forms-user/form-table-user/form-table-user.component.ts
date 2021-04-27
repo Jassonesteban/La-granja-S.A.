@@ -44,7 +44,7 @@ export class FormTableUserComponent implements OnInit {
             });
           }
         });
-      }, 2000);
+      }, 9000);
 
     }
   

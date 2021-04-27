@@ -25,7 +25,7 @@ export class FormRegisterComponent implements OnInit {
   
   
 
-  constructor(private router: Router, private dataServiceService: DataServiceService) { }
+  constructor(private dataServiceService: DataServiceService) { }
 
   ngOnInit(): void {
   }
@@ -37,7 +37,7 @@ export class FormRegisterComponent implements OnInit {
       this.mensaje = 'Lo estamos registrando, por favor espere';
       this.dataServiceService.CreateUser(this.usuario).subscribe(
         res =>{
-          this.mensaje = "Felicidades, el usuario fue registrado exitosamente";
+          this.mensaje = "El cliente "+ name.value + " " + lastName.value + " fue registrado correctamente";
           document.getElementById('btnModal').click();
         },
         err => console.log(err)

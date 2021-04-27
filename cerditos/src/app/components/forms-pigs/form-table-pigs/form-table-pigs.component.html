@@ -5,7 +5,7 @@
             <th scope="col">N.</th>
             <th scope="col">Nombre(s)</th>
             <th scope="col">Apellido(s)</th>
-            <th scope="col">ver cerdito</th>
+            <th scope="col">cerditos comprados</th>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +15,7 @@
             <td>{{buyers.lastName}}</td>
             <td *ngFor="let pig of buyers.pigs">
                 <button type="button" class="btn btn-view-info-pig" data-bs-toggle="modal" data-bs-target="#exampleModalinfoPigUser">
-                    ver info
+                    cerdito
                 </button>
                 <div class="modal fade" id="exampleModalinfoPigUser" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -27,11 +27,17 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                {{pig.id}} - {{pig.breed}}
+                                <div class="container">
+                                    <p>{{pig.id}} - {{pig.breed}}</p>
+                                    <p>{{pig.age}} año(s)</p>
+                                    <p>{{pig.weight}} kilos</p>
+                                </div>
+                                <div class="container" *ngFor="let food of buyers.pigs.foods">
+                                    <label>{{food.dose}} de cantidad</label>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background: pink; color: black; border-radius: 30px; width: 20%; border: 1px solid;">Aceptar</button>
                             </div>
                         </div>
                     </div>

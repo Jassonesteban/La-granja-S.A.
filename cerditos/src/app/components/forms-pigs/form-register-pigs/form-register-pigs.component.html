@@ -7,7 +7,8 @@
             <div class="col-6">
                 <div class="box-item-form-user">
                     <label>Raza</label>
-                    <select class="form-data form-control" id="validationCustom01" name="RazaPig" [(ngModel)]="Pig.breed" id="RazaPig" #RazaPig required>
+                    <select class="form-data form-control" id="validationCustom01" name="RazaPig"
+                        [(ngModel)]="Pig.breed" id="RazaPig" #RazaPig required>
                         <option selected disabled value="">Seleccione raza</option>
                         <option value="YORK">YORK</option>
                         <option value="HAMP">HAMP</option>
@@ -22,7 +23,7 @@
                 <div class="box-item-form-user">
                     <label>edad</label>
                     <input type="text" class="form-data form-control" placeholder="edad del cerdito"
-                        id="validationCustom02" name="agePig" [(ngModel)]="Pig.age" id="agePig" #agePig required/>
+                        id="validationCustom02" name="agePig" [(ngModel)]="Pig.age" id="agePig" #agePig required />
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -35,7 +36,8 @@
                 <div class="box-item-form-user">
                     <label>peso</label>
                     <input type="text" class="form-data form-control" placeholder="Peso del cerdito"
-                        id="validationCustom03" name="PesoPig" [(ngModel)]="Pig.weight" id="PesoPig" #PesoPig required/>
+                        id="validationCustom03" name="PesoPig" [(ngModel)]="Pig.weight" id="PesoPig" #PesoPig
+                        required />
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -46,21 +48,25 @@
 
         <div class="row">
             <div class="box-title-food-pig">
+                <img class="img-icon-form" src="assets/images/foodIcon.png">
                 <h2>Alimentación</h2>
             </div>
-            <div class="col-6"> 
+            <div class="col-6">
                 <div class="box-form-textarea">
                     <label>Dosis</label>
-                <textarea class="textarea-dosis form-control" placeholder="Ingrese la dosis necesaria del cerdito" id="validationCustom04" #dosisPig [(ngModel)]="Food.dose" name="dosisPig"></textarea>
-                <div class="invalid-feedback">
-                    No puedes dejar vacio este campo
-                </div>
+                    <textarea class="textarea-dosis form-control" placeholder="Ingrese la dosis necesaria del cerdito"
+                        id="validationCustom04" #dosisPig [(ngModel)]="Food.dose" name="dosisPig"></textarea>
+                    <div class="invalid-feedback">
+                        No puedes dejar vacio este campo
+                    </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="box-form-textarea">
                     <label>Descripción</label>
-                    <textarea class="textarea-description form-control" placeholder="describa brevemente la alimentación" id="validationCustom05" #DescriptionFood [(ngModel)]="Food.description" name="descriptionPig"></textarea>
+                    <textarea class="textarea-description form-control"
+                        placeholder="describa brevemente la alimentación" id="validationCustom05" #DescriptionFood
+                        [(ngModel)]="Food.description" name="descriptionPig"></textarea>
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -70,13 +76,15 @@
 
         <div class="row">
             <div class="box-title-food-pig">
+                <img class="img-icon-form" src="assets/images/usuario.png">
                 <h2>Comprador</h2>
-            </div> 
-            <div class="col-6"> 
+            </div>
+            <div class="col-6">
                 <div class="box-form-textarea">
                     <label>Cedula del comprador</label>
                     <input type="text" class="form-data form-control" placeholder="Ingrese la cedula del comprador"
-                    id="validationCustom06" name="idComprador" [(ngModel)]="Pig.user.id" id="cedulaComprador" #cedulaComprador required/>
+                        id="validationCustom06" name="idComprador" [(ngModel)]="Pig.user.id" id="cedulaComprador"
+                        #cedulaComprador required />
                     <div class="invalid-feedback">
                         No puedes dejar vacio este campo
                     </div>
@@ -87,9 +95,46 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="box-btn-submit">
-                    <button type="submit" class="btn-new-client" (click)="Registerpig(RazaPig, agePig, PesoPig, dosisPig, DescriptionFood, cedulaComprador)">Registrar cerdito</button>
+                    <button type="submit" class="btn-new-client"
+                        (click)="Registerpig(RazaPig, agePig, PesoPig, dosisPig, DescriptionFood, cedulaComprador)">Registrar
+                        cerdito</button>
                 </div>
             </div>
         </div>
     </form>
+</div>
+
+ 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success" id="btnModalRegisterPig" data-bs-toggle="modal" data-bs-target="#exampleModalregisterPig" style="display: none;">
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalregisterPig" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro exitoso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Felicidades, usted compro el cerdito de raza
+                <p>{{cerdito.breed}}</p>
+
+                <div class="body-details">
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Peso: {{cerdito.weight}} kg</label>
+                        </div>
+                        <div class="col-6">
+                            <label>Edad: {{cerdito.age}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
 </div>

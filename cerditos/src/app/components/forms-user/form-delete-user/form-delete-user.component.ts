@@ -6,44 +6,60 @@ import { DataServiceService } from '../../../services/data-service.service';
   selector: 'app-form-delete-user',
   templateUrl: './form-delete-user.component.html',
   styleUrls: ['./form-delete-user.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush  
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormDeleteUserComponent implements OnInit {
 
- @Input() cedula: string;
- @Input() nombres: string;
- @Input() apellidos: string;
- 
- @Output() refrescar = new EventEmitter<string>();
+  @Input() cedula: string;
+  @Input() nombres: string;
+  @Input() apellidos: string;
 
- mensaje = '';
-  constructor( private dataServiceService: DataServiceService) { 
+  @Output() refrescar = new EventEmitter<string>();
+
+  mensaje = '';
+  constructor(private dataServiceService: DataServiceService) {
   }
 
   ngOnInit(): void {
   }
- 
-  public eliminar(){ 
-    this.deleteUser(); 
+
+  public eliminar() {
+    this.borrarUser();
   }
 
-  private deleteUser(){
+  private borrarUser() {
     var cedula = this.cedula;
-    var alertOne = document.getElementById('alertOne');
-    var alertTwo = document.getElementById('alertTwo');
-    var success = document.getElementById('alertSuccess');
+
     this.dataServiceService.DeleteUser(cedula).subscribe(
       res => {
-        this.mensaje = "Se elimino el usuario correctamente";
-        console.log("se elimino el usuario");
-        alertOne.style.display = "none";
-        alertTwo.style.display = "none";
-        success.style.display = "block";
-        //document.getElementById('btnclosed').click();
-        this.refrescar.emit();
+        this.mensaje = "se borro el usuario correctamente";
+        this.actionsMessagesInterfaceDelete();
       },
       err => console.log(err)
     );
   }
+
+  private actionsMessagesInterfaceDelete() {
+    var alertone = document.getElementById('alertWarning');
+    alertone.style.display = "none";
+
+    var alertTwo = document.getElementById('alertSuccess');
+    alertTwo.style.display = "block";
+
+    var btnCancel = document.getElementById('cancelActionDelete');
+    btnCancel.style.display = "none";
+
+    var btnDelete = document.getElementById('btnDeleteUser');
+    btnDelete.style.display = "none";
+
+    var btnSuccess = document.getElementById('successfullDeleteUser');
+    btnSuccess.style.display = "block";
+
+  }
+
+  public refreshData(){
+    window.location.reload();
+  }
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from 'src/app/services/data-service.service';
+import { AdminComponent } from '../admin/admin.component';
 
 @Component({
   selector: 'app-welcome',
@@ -9,6 +10,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 export class WelcomeComponent implements OnInit {
 
   usuario: any =[];
+  admin: AdminComponent
   constructor(private dataServiceService: DataServiceService) { }
 
   ngOnInit() {
@@ -28,6 +30,7 @@ export class WelcomeComponent implements OnInit {
             localStorage.setItem('usuario', JSON.stringify(cedula));
             this.usuario = JSON.parse(localStorage.getItem('usuario'));
             window.location.href="/inicio";
+            this.admin.getUser();
           } else{
             console.log("ups, este usuario no existe");
           }

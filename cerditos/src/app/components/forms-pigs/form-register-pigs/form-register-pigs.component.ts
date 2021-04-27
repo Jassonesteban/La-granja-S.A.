@@ -28,7 +28,7 @@ export class FormRegisterPigsComponent implements OnInit {
   };
 
   comida: any = [];
-  //cerdito: any = [];
+  cerdito: any = [];
 
   mensaje = '';
 
@@ -42,7 +42,7 @@ export class FormRegisterPigsComponent implements OnInit {
     if (breed.value === '' || age.value === '' || weight.value === '' || dosis.value === '' || description.value === '' || cc.value === '') {
       this.validate();
     } else {
-      this.dataServiceService.CreateFood(this.Food).subscribe(
+      this.dataServiceService.CreateFood(this.Food).subscribe( 
         res => {
           this.comida = res;
           console.log("comida registrada");
@@ -50,8 +50,10 @@ export class FormRegisterPigsComponent implements OnInit {
           console.log("el codigo de la comida es: " + this.Pig.food.id);
           this.dataServiceService.CreatePig(this.Pig).subscribe(
             res => {
+              this.cerdito = res;
               console.log("creado")
-              console.log(res);
+              console.log(this.cerdito);
+              document.getElementById('btnModalRegisterPig').click();
             },
             err => console.log(err)
           );
