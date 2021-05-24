@@ -1,11 +1,17 @@
 .btn-delete {
-  padding: 2% 6%;
-  width: 25%;
+  padding: 3px;
+  width: 100%;
   border: 1px solid pink;
   margin-inline-end: 19px;
-  border-radius: 50%;
+  border-radius: 11px;
   background: pink;
   cursor: pointer;
+  color: black;
+  font-family: "Londrina Solid";
+  text-decoration: underline;
+  font-size: 105%;
+  margin: 3px 18px 6px -6px;
+  letter-spacing: 1px;
 }
 
 .btn-edit {
@@ -19,11 +25,11 @@
 
 .icon-crud {
   padding: 0%;
-    width: 18px;
-    margin-block-end: 4px;
-    margin-inline-start: 0px;
-    margin-inline-end: 24px;
-    position: relative;
+  width: 18px;
+  margin-block-end: 4px;
+  margin-inline-start: 0px;
+  margin-inline-end: 24px;
+  position: relative;
 }
 
 .btns-crud {
@@ -67,4 +73,319 @@ caption {
 
 .items-submenu-user.active {
   padding: 0%;
+}
+
+.body-alert-delete-user {
+  padding: 3%;
+  width: 100%;
+  text-align: center;
+  background: ghostwhite;
+}
+
+.body-alert-delete-user h5 {
+  padding: 0%;
+  font-size: 110%;
+  font-family: "Circular-Loom";
+  color: gray;
+  line-height: 15px;
+}
+
+.body-alert-delete-user h5 strong {
+  padding: 0%;
+  color: black;
+  font-size: 117%;
+  text-decoration: underline;
+}
+
+.body-alert-delete-user h4 {
+  padding: 0%;
+  font-size: 120%;
+  color: gray;
+  font-family: "Circular-Loom";
+  line-height: 28px;
+}
+
+.body-alert-delete-user h4 strong {
+  padding: 0%;
+  color: black;
+  font-size: 110%;
+  text-decoration: underline;
+}
+
+.alert-question-delete {
+  padding: 1%;
+  width: 100%;
+  margin-block-start: 11px;
+}
+
+.alert-question-delete p {
+  padding: 0%;
+  font-size: 126%;
+  font-family: "Circular-Loom";
+  color: rgb(124, 6, 6);
+  font-weight: bolder;
+}
+
+.btn-delete-user {
+  padding: 1%;
+  background: rgba(196, 23, 89, 0.816);
+  color: white;
+  border-radius: 30px;
+  width: 19%;
+  font-size: 97%;
+  font-family: "Circular-Loom";
+  letter-spacing: 0px;
+  display: block;
+}
+
+.btn-delete-user:hover {
+  background: rgba(230, 119, 162, 0.816);
+  cursor: pointer;
+}
+
+.btn-cancel-action {
+  padding: 1%;
+  width: 19%;
+  background: lightgrey;
+  border-radius: 30px;
+  font-family: "Circular-Loom";
+  font-size: 97%;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.btn-accpet-user {
+  padding: 1%;
+  background: rgba(196, 23, 89, 0.816);
+  color: white;
+  border-radius: 30px;
+  width: 19%;
+  font-size: 97%;
+  font-family: "Circular-Loom";
+  letter-spacing: 0px;
+  display: none;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  width: 100%;
+  background: rgb(237, 156, 168);
+  font-family: "Londrina Solid";
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 128%;
+  width: 100%;
+  text-align: center;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  font-size: 113%;
+  font-family: "Londrina Solid";
+  width: 100%;
+  text-align: center;
+}
+
+.modal-header .btn-close {
+  padding: 0.5rem 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+  display: none;
+}
+
+.alert-successful-delete {
+  display: none;
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Circular-Loom";
+  font-size: 99%;
+}
+
+.alert-items-warning {
+  padding: 3%;
+  font-family: "Circular-Loom";
+  color: black;
+  font-size: 104%;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.box-img-profile-user {
+  padding: 0%;
+  width: 98%;
+  text-align: start;
+}
+
+.img-user {
+  padding: 5%;
+  width: 100%;
+}
+
+.box-item {
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  margin-block-end: 5%;
+}
+
+.box-item h1 {
+  padding: 0%;
+  font-size: 162%;
+  font-family: "Circular-Loom";
+  color: darkslategray;
+}
+
+.box-two-item {
+  padding: 0%;
+  width: 100%;
+  display: inline-flex;
+}
+
+.box-two-item h3 {
+  padding: 0%;
+  font-size: 127%;
+  margin-inline-start: 81px;
+  font-family: "Londrina Solid";
+  color: black;
+}
+
+.address {
+  padding: 0%;
+}
+
+.phone {
+  padding: 0%;
+}
+
+.btn-accpet-user-info {
+  padding: 6px;
+  background: pink;
+  width: 17%;
+  border-radius: 18px;
+  font-family: "Londrina Solid";
+  color: black;
+  font-size: 122%;
+  letter-spacing: 1px;
+}
+
+/* table pigs */
+
+.body-table-pigs {
+  padding: 2%;
+  width: 100%;
+}
+
+.box-title-table-pigs {
+  padding: 0%;
+  width: 70%;
+  text-align: left;
+  border-bottom: 1px solid gray;
+  margin-block-end: 18px;
+  margin-block-start: 14px;
+  display: inline-flex;
+}
+
+.box-title-table-pigs h1 {
+  padding: 1%;
+  font-size: 132%;
+  font-family: "Circular-Loom";
+  color: gray;
+}
+
+.table {
+  padding: 0%;
+  font-family: "Circular-Loom";
+  color: black;
+  font-size: 100%;
+}
+
+/* crud user */
+
+.box-actions-crud {
+  padding: 0%;
+  width: 100%;
+  text-align: center;
+  margin-block-start: 13px;
+  margin-block-end: 10px;
+}
+
+.box-title-crud {
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.box-title-crud h5 {
+  padding: 0%;
+  font-family: "Circular-Loom";
+  font-size: 100%;
+  color: darkslategray;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.body-crud-users {
+  padding: 0%;
+  display: inline-grid;
+  line-height: 22px;
+  margin-block-start: 14px;
+  margin-block-end: 14px;
+  width: 100%;
+}
+
+.btn-delete-user-crud {
+  padding: 5%;
+  width: 100%;
+  margin-block-end: 15px;
+  border-radius: 16px;
+  background: indianred;
+  color: white;
+  font-family: "Circular-Loom";
+  font-size: 100%;
+  border: 1px solid;
+}
+
+.btn-update-user-crud {
+  padding: 5%;
+  width: 100%;
+  margin-block-end: 15px;
+  border-radius: 16px;
+  background: rgb(92, 147, 205);
+  color: white;
+  font-family: "Circular-Loom";
+  font-size: 100%;
+  border: 1px solid;
+}
+
+.icon-img-detail-user {
+  padding: 0%;
+  width: 10%;
+  margin-inline-end: 3px;
+  margin-block-start: -8px;
+}
+
+.icon-img-pigs {
+  padding: 0%;
+  width: 11%;
+  margin-inline-end: 11px;
+  margin-block-end: 3px;
+  margin-block-start: -4px;
+  height: 11%;
 }

@@ -10,10 +10,13 @@ import { FormDeleteUserComponent } from '../form-delete-user/form-delete-user.co
 export class FormTableUserComponent implements OnInit {
 
   
-  @ViewChildren('borrar') delete: QueryList<FormDeleteUserComponent>
-  @Output() refresh = new EventEmitter<string>();
+  //@ViewChildren('borrar') delete: QueryList<FormDeleteUserComponent>
+ // @Output() refresh = new EventEmitter<string>();
 
   comprador: any = [];
+  person: any = [];
+  PigsBuys: any = [];
+  alerta = '';
 
   constructor( private dataServiceService: DataServiceService) { }
 
@@ -29,6 +32,57 @@ export class FormTableUserComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  public verDataUser(event){
+    console.log(event.path[0].lastChild.innerText);
+    let cc = event.path[0].lastChild.innerText;
+    this.dataServiceService.searchUser(cc.trim()).subscribe(
+      res => {
+        this.person = res;
+        console.log(this.person);
+        this.PigsBuys = this.person;
+        console.log(this.PigsBuys.pigs);
+      },
+      err => console.log(err)
+    );
+  }
+
+  
+
+  public deleteUSER( event ){
+    console.log(event.path[0].lastChild.innerText);
+    let user = event.path[0].lastChild.innerText;
+    this.dataServiceService.DeleteUser(user.trim()).subscribe(
+      res => {
+        this.person = res;
+        alert("Usuario elimiando");
+        document.getElementById('closeModal').click();
+      }
+    )
+  }
+
+  /*
+
+  private borrarUser() {
+  }
+
+  private actionsMessagesInterfaceDelete() {
+    var alertone = document.getElementById('alertWarning');
+    alertone.style.display = "none";
+
+    var alertTwo = document.getElementById('alertSuccess');
+    alertTwo.style.display = "block";
+
+    var btnCancel = document.getElementById('cancelActionDelete');
+    btnCancel.style.display = "none";
+
+    var btnDelete = document.getElementById('btnDeleteUser');
+    btnDelete.style.display = "none";
+
+    var btnSuccess = document.getElementById('successfullDeleteUser');
+    btnSuccess.style.display = "block";
+
   }
 
 
@@ -47,6 +101,6 @@ export class FormTableUserComponent implements OnInit {
       }, 9000);
 
     }
-  
+  */
 
 }

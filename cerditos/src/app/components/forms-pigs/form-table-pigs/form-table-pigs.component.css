@@ -67,7 +67,7 @@ caption {
   padding: 0%;
 }
 
-.btn-view-info-pig{
+.btn-view-info-pig {
   padding: 3%;
   background: pink;
   width: 90%;
@@ -76,7 +76,157 @@ caption {
   font-size: 100%;
   color: black;
   font-weight: bolder;
-  font-family: 'Circular-Loom';
+  font-family: "Circular-Loom";
   text-align: center;
   margin-inline-start: 10px;
+}
+
+.box-pigs-buys {
+  padding: 0%;
+  display: inline-block;
+  background: pink;
+  margin-inline-end: 9px;
+  border-radius: 6px;
+  width: 23%;
+  text-align: center;
+  font-family: "Circular-Loom";
+  text-decoration: underline;
+  cursor: pointer;
+  line-height: 32px;
+}
+
+.box-pigs-buys:hover {
+  padding: 0%;
+  display: inline-block;
+  background: rgb(187, 112, 124);
+  margin-inline-end: 9px;
+  border-radius: 6px;
+  width: 23%;
+  text-align: center;
+  font-family: "Circular-Loom";
+  text-decoration: underline;
+  cursor: pointer;
+  line-height: 32px;
+  color: white;
+}
+
+.box-img {
+  padding: 1%;
+  width: 100%;
+}
+
+.box-img img {
+  padding: 0%;
+  width: 100%;
+  margin-block-start: 30px;
+}
+
+.body-box-pig {
+  padding: 2%;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-block-start: 12px;
+}
+
+.body-box-pig label {
+  padding: 0%;
+  font-size: 119%;
+  color: black;
+  font-family: "Circular-Loom";
+  margin-inline-end: 8px;
+}
+
+.body-box-pig p {
+  padding: 0%;
+  margin-bottom: 0;
+  font-size: 124%;
+  color: rgb(225, 136, 151);
+  font-weight: bolder;
+  border-bottom: 1px solid;
+}
+
+.title-pig {
+  padding: 0%;
+  font-size: 129%;
+  color: palevioletred;
+  font-family: "Londrina Solid";
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.body-box-food {
+  padding: 3%;
+  width: 100%;
+  background: ghostwhite;
+  margin-block-start: 12px;
+  border-radius: 14px;
+}
+
+.body-box-food h2 {
+  padding: 0%;
+  width: 100%;
+  font-size: 128%;
+  color: rgb(189, 65, 131);
+  font-family: "Circular-Loom";
+  text-decoration: underline;
+  margin-block-end: 15px;
+}
+
+.descritpion {
+  padding: 0%;
+  width: 100%;
+  display: flex;
+}
+
+.descritpion label {
+  padding: 0%;
+  margin-inline-end: 9px;
+  font-size: 111%;
+  color: black;
+  font-family: "Circular-Loom";
+}
+
+.descritpion p {
+  padding: 0%;
+  margin-bottom: 0;
+  font-size: 107%;
+  font-family: "Londrina Solid";
+}
+
+.dose-food {
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  margin-inline-start: 40px;
+}
+
+.dose-food label {
+  padding: 0%;
+  margin-inline-end: 9px;
+  font-size: 111%;
+  color: black;
+  font-family: "Circular-Loom";
+}
+
+.dose-food p {
+  padding: 0%;
+  margin-bottom: 0;
+  font-size: 107%;
+  font-family: "Londrina Solid";
+}
+
+.body-items-food {
+  padding: 0%;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 72%;
+  background: ghostwhite;
+  padding: 3%;
+  border-radius: 10px;
 }

@@ -43,6 +43,9 @@ export class DataServiceService {
 
   getAdmin(cc: string){
     return this.http.get('http://localhost:1999/user/' + cc);
+  }
 
+  getDetailsPigs(id: string){
+    return this.http.get('http://localhost:1999/pig/' + id);
   }
 }

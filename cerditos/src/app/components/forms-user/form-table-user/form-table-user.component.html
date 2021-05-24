@@ -1,42 +1,123 @@
 <table class="table caption-top">
     <caption>Nuestros clientes</caption>
-    
+
     <thead>
         <tr>
             <th scope="col">N.</th>
             <th scope="col">Nombre(s)</th>
             <th scope="col">Apellido(s)</th>
             <th scope="col">Direccion</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Id unico</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let users of comprador ; let i = index">
             <th scope="row">{{i + 1}}</th>
-            <td>{{users.name}}</td> 
-            <td>{{users.lastName}}</td> 
-            <td>{{users.adress}}</td> 
+            <td>{{users.name}}</td>
+            <td>{{users.lastName}}</td>
+            <td>{{users.adress}}</td>
+            <td>{{users.id}}</td>
             <td>
-                <div class="btns-crud">
-                    <button class="btn btn-delete" type="button" data-bs-toggle="modal" 
-                        data-bs-target="#staticBackdrop">
-                        <img src="assets/images/borrar.png" class="icon-crud">
-                    </button>
-                        <app-form-delete-user (refrescar) = "verData()" #borrar [cedula] = "users.id" [nombres] = "users.name" [apellidos] = "users.lastName"></app-form-delete-user>
+                <button type="button" class="btn btn-delete" (click)="verDataUser($event)" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Ver
+                    usuario <div style="display: none;">
+                        {{users.id}}
+                    </div>
 
-                    <button class="btn btn-edit" type="button" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdropedit">
-                        <img src="assets/images/editar.png" class="icon-crud">
-                    </button>
-                    <div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <app-form-update-user></app-form-update-user>
+                </button>
+
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Detalles del cliente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="box-img-profile-user">
+                                                <img src="./../../../../assets/images/man-user.png" alt="user-profile"
+                                                    class="img-user">
+                                            </div>
+                                            <div class="box-actions-crud">
+                                                <div class="box-title-crud">
+                                                    <h5>Opciones de usuario</h5>
+                                                </div>
+                                                <div class="body-crud-users">
+                                                    <button type="button" class="btn-delete-user-crud" (click)="deleteUSER( $event )">Eliminar
+                                                        cuenta
+                                                        <div style="display: none;">
+                                                            {{users.id}}
+                                                        </div>
+                                                    
+                                                    </button>
+                                                    <button type="button" class="btn-update-user-crud">Actualizar
+                                                        cliente</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="box-item">
+                                                <h1>{{person.name}} {{person.lastName}}</h1>
+                                            </div>
+                                            <div class="box-two-item">
+                                                <h3 class="address">
+                                                    <img src="./../../../../assets/images/senal-de-trafico.png" class="icon-img-detail-user">
+                                                    {{person.adress}}</h3>
+                                                <h3 class="phone">
+                                                    <img src="./../../../../assets/images/phone.png" class="icon-img-detail-user">
+                                                    {{person.tel}}</h3>
+                                            </div>
+
+
+                                            <div class="body-table-pigs">
+                                                <div class="box-title-table-pigs">
+                                                    <img src="./../../../../assets/images/cerdo-icon.png" class="icon-img-pigs">
+                                                    <h1>Cerditos comprados</h1>
+                                                </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Id</th>
+                                                            <th scope="col">Raza</th>
+                                                            <th scope="col">Peso (Kilos)</th>
+                                                            <th scope="col">edad (años)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let pig of PigsBuys.pigs ; let i = index">
+                                                            <th scope="row">{{i + 1}}</th>
+                                                            <td>{{pig.id}}</td>
+                                                            <td>{{pig.breed}}</td>
+                                                            <td>{{pig.weight}}</td>
+                                                            <td>{{pig.age}}</td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-accpet-user-info"
+                                    data-bs-dismiss="modal" id="closeModal">Aceptar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </td>
         </tr>
 
     </tbody>
 </table>
-
-

@@ -5,7 +5,7 @@
             <th scope="col">N.</th>
             <th scope="col">Nombre(s)</th>
             <th scope="col">Apellido(s)</th>
-            <th scope="col">cerditos comprados</th>
+            <th scope="col">Id cerditos</th>
         </tr>
     </thead>
     <tbody>
@@ -13,40 +13,91 @@
             <th scope="row">{{ i + 1 }}</th>
             <td>{{buyers.name}}</td>
             <td>{{buyers.lastName}}</td>
-            <td *ngFor="let pig of buyers.pigs">
-                <button type="button" class="btn btn-view-info-pig" data-bs-toggle="modal" data-bs-target="#exampleModalinfoPigUser">
+            <td>
+                <div *ngFor="let pig of buyers.pigs" class="box-pigs-buys">
+                    <a id="refPif" (click)="getIdPig( $event)" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalinfoPigUser">{{pig.id}}</a>
+                </div>
+            </td>
+
+            <!-- 
+
+                    <button type="button" class="btn btn-view-info-pig" data-bs-toggle="modal" data-bs-target="#exampleModalinfoPigUser">
                     cerdito
                 </button>
-                <div class="modal fade" id="exampleModalinfoPigUser" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Cerdito comprado</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container">
-                                    <p>{{pig.id}} - {{pig.breed}}</p>
-                                    <p>{{pig.age}} año(s)</p>
-                                    <p>{{pig.weight}} kilos</p>
+                 <label>{{food.dose}} de cantidad</label>
+                 -->
+            <div class="modal fade" id="exampleModalinfoPigUser" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cerdo  {{cerdito.breed}} </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="box-img">
+                                        <img src="./../../../../assets/images/img-cerdo.png">
+                                    </div>
                                 </div>
-                                <div class="container" *ngFor="let food of buyers.pigs.foods">
-                                    <label>{{food.dose}} de cantidad</label>
+                                <div class="col-9">
+                                    <h1 class="title-pig">Datos del porcino</h1>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="body-box-pig">
+                                                <label>N. </label>
+                                                <p>{{cerdito.id}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="body-box-pig">
+                                                <label>edad: </label>
+                                                <p>{{cerdito.age}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="body-box-pig">
+                                                <label>Peso: </label>
+                                                <p>{{cerdito.weight}} kilos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background: pink; color: black; border-radius: 30px; width: 20%; border: 1px solid;">Aceptar</button>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="body-box-food">
+                                        <h2>Alimentación</h2>
+                                        <div class="body-items-food">
+                                            <div class="descritpion">
+                                                <label>Descripcion: </label>
+                                                <p>{{food.description}}</p>
+                                            </div>
+                                            <div class="dose-food">
+                                                <label>Dosis diaria: </label>
+                                                <p>{{food.dose}}</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                style="background: pink; color: black; border-radius: 30px; width: 20%; border: 1px solid;">Aceptar</button>
                         </div>
                     </div>
                 </div>
-
-
-
-
-            </td>
+            </div>
 
         </tr>
     </tbody>
